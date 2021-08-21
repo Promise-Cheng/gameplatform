@@ -17,7 +17,7 @@ export default [
   {
     name: 'Register',
     path: '/Register',
-    component: import('@/views/login/Register'),
+    component: () => import('@/views/login/Register'),
     meta: {
       cache: true,
       title: '注册'

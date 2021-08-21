@@ -43,7 +43,7 @@ export default {
      */
     addTab(route) {
       // 判断是否已经存在
-      const index = caches.findIndex(item => item === route.name)
+      const index = this.caches.findIndex(item => item === route.name)
       if (index === -1) {
         // 添加缓存
         if (route.cache) {

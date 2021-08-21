@@ -45,7 +45,7 @@
         <div class="gameplatform-login-bottom">
           <div class="gameplatform-login-bottom-button">找回密码</div>
           <div class="gameplatform-login-bottom-divider"></div>
-          <div class="gameplatform-login-bottom-button" @click="handleRegister">注册账号</div>
+          <div class="gameplatform-login-bottom-button">注册账号</div>
         </div>
       </div>
     </div>
