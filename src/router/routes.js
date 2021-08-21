@@ -14,5 +14,13 @@ export default [
       title: '登录'
     }
   },
-
+  {
+    name: 'Register',
+    path: '/Register',
+    component: import('@/views/login/Register'),
+    meta: {
+      cache: true,
+      title: '注册'
+    }
+  },
 ]

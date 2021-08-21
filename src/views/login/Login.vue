@@ -39,6 +39,7 @@
               type="primary"
               class="margin-top-16 gameplatform-login-input"
               @click="handleSubmit"
+              :loading="submitLoading"
           >登录
           </el-button>
         </div>
@@ -59,6 +60,7 @@
       return {
         checked1: false,
         checked2: false,
+        submitLoading: false,
         query: {
           userName: '',
           password: '',
@@ -84,10 +86,18 @@
       handleBlur(val, type) {
         this['checked' + type] = !val
       },
-      handleSubmit() {
-        if(!this.query.userName) this.checked1 = true
-        if(!this.query.password) this.checked2 = true
-
+      async handleSubmit() {
+        if (!this.query.userName) this.checked1 = true
+        if (!this.query.password) this.checked2 = true
+        if (this.checked1 || this.checked2) return
+        try {
+          this.submitLoading = true
+          await setTimeout(() => {
+            this.submitLoading = false
+          }, 2000)
+        } finally {
+          // this.submitLoading = false
+        }
       },
     }
   }
