@@ -1,7 +1,61 @@
+@import "@/assets/styles/variables.scss";
+
 body, html {
   padding: 0;
   margin: 0;
   background-color: #fff;
   color: #333;
   position: relative;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}
+.validate-error {
+  .el-input__inner {
+    border-color: $red;
+  }
+}
+
+.el-input__inner {
+  border-color: #dddddd;
+  color: #333;
+
+  &::placeholder {
+    color: #666;
+  }
+
+  &::-webkit-input-placeholder {
+    /* WebKit browsers 适配谷歌 */
+    color: #666;
+  }
+
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 适配火狐 */
+    color: #666;
+  }
+
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ 适配火狐 */
+    color: #666;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10+  适配ie*/
+    color: #666;
+  }
+}
+
+.el-input__prefix {
+  > i {
+    font-size: 16px;
+  }
+}
+
+.margin-top-8 {
+  margin-top: 8px !important;
+}
+.margin-top-16 {
+  margin-top: 16px !important;
 }
