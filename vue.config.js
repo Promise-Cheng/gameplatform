@@ -24,6 +24,6 @@ module.exports = {
       "Access-Control-Allow-Headers":
         "X-Requested-With, content-type, Authorization",
     },
-    // proxy: require("./config/proxy"),
+    proxy: require("./config/proxy"),
   },
 };

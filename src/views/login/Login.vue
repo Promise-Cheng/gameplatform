@@ -54,6 +54,8 @@
 </template>
 
 <script>
+  import {getRequest} from "@/api";
+
   export default {
     name: "login",
     data() {
@@ -92,11 +94,9 @@
         if (this.checked1 || this.checked2) return
         try {
           this.submitLoading = true
-          await setTimeout(() => {
-            this.submitLoading = false
-          }, 2000)
+          await getRequest({}, {})
         } finally {
-          // this.submitLoading = false
+          this.submitLoading = false
         }
       },
       handleRegister() {
